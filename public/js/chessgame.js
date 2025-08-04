@@ -105,11 +105,17 @@ function showMessage(text) {
 
 socket.on("playerRole", function (role) {
   playerRole = role;
+  if (role === "b") {
+    boardElement.classList.add("flipped");
+  } else {
+    boardElement.classList.remove("flipped");
+  }
   renderBoard();
 });
 
 socket.on("spectatorRole", function () {
   playerRole = null;
+  boardElement.classList.remove("flipped");
   renderBoard();
 });
 

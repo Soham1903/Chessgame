@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Chess Game</title>
     <style>
       .chessboard {
         display: grid;
@@ -57,6 +57,29 @@
       /* Rotate pieces for black player */
       .flipped .piece {
         transform: rotate(180deg);
+      }
+
+      #player-info {
+        padding: 10px 20px;
+        border-radius: 8px;
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      #player-info.white {
+        background: #f0d9b5;
+        color: #000;
+      }
+
+      #player-info.black {
+        background: #b58863;
+        color: #fff;
+      }
+
+      #turn-indicator {
+        font-size: 16px;
+        padding: 5px 10px;
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.1);
       }
     </style>
   </head>
