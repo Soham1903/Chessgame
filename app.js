@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const socket = require("socket.io");
 const http = require("http");
@@ -63,6 +64,5 @@ io.on("connection", function (uniquesocket) {
   });
 });
 
-server.listen(3000, function () {
-  console.log("listening on port 3000");
-});
+const port = process.env.PORT || 3000;
+server.listen(port, () => console.log(`Server running on port ${port}`));
