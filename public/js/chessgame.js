@@ -1,4 +1,4 @@
-const socket = io();
+const socket = io("https://chessgame-9q3u.onrender.com/");
 const chess = new Chess();
 const boardElement = document.querySelector(".chessboard");
 
